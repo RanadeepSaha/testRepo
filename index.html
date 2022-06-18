@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get All your prints delivered to your home</title>
+    <link rel="stylesheet" href="style.css" class="rel">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"> </a>
+            <div class="nav-links" id="navLinks" >
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html">SERVICE</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="order.html">ORDER</a></li>
+                <li><a href="index.html">CONTACT US</a></li>
+               </ul>
+            </div>
+            <i class="fa fa-bars"onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Online Delivery of Your Daily Printing Needs</h1>
+            <p>First time in Kolkata, online printing & delivery of your school, 
+                college projects, assignments, official documents very next day with 
+                FREE Delivery</p>
+            <a href="" class="hero-btn" >Print Your Docs</a>
+        </div>
+
+    </section>
+
+    <!------Service------->
+
+    <section class="service">
+        <img src="images/printer.png" class="footer-img">
+
+        <h1>Printings We Offer</h1>
+        <p>A4, A3 Bond Paper, Normal Paper, Photo Paper</p>
+
+        <div class="row">
+            <div class="service-col">
+                <h3>A3 Size Printings</h3>
+                <p>All types of A3 official documents printing</p>
+            </div>
+            <div class="service-col">
+                <h3>Photo Printings</h3>
+                <p>All types of A3 official documents printing</p>
+            </div>
+            <div class="service-col">
+                <h3>Bond Paper Printings</h3>
+                <p>All types of A3 official documents printing</p>
+            </div>
+            <div class="service-col">
+                <h3>Normal Printing</h3>
+                <p>All types of A3 official documents printing</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!----------------Footer------------>
+
+    <section class="footer" >
+
+    <h4>About Us</h4>
+    <p>No 1 Printing Solution</p>
+
+    <div class="footer-row">
+        <div class="footer-left">
+            <h4>Delivery Hours</h4>
+            <p><i class="fa fa-clock-o"></i>Morning Daily 7am to 10am</p>
+            <p><i class="fa fa-clock-o"></i>Evening Daily 6pm to 10pm</p>
+
+        </div>
+        <div class="footer-right">
+            <h4>Ordering Hours</h4>
+            <p><i class="fa fa-clock-o"></i>Order before 8pm delivered next day morning</p>
+            <p><i class="fa fa-clock-o"></i>Order before 2pm delivered same day evening</p>
+        </div>
+    </div>
+
+    <div class="social-links">
+        <a href="https://facebook.com" target="_blank" class="fa fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank" i class="fa fa-instagram"></i></a>
+        <a href="https://wa.link/6dddzy" target="_blank" i class="fa fa-whatsapp"></i></a>
+        <p>Copyright Ranadeep Saha</p>
+    </div>
+
+    </section>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right= "-200px";
+        }
+    </script>
+ 
+</body>
+</html>

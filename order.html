@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get All your prints delivered to your home</title>
+    <link rel="stylesheet" href="style.css" class="rel">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="designForm">
+        <div class="container">
+            <header> Print Your Docs</header>
+            <div class="progress-bar">
+
+                <div class="step">
+                    <p>Upload</p>
+                    <div class="bullet">
+                        <span>1</span>
+                    </div>
+                    <div class="check fa fa-check"></div>
+                </div>
+
+                <div class="step">
+                    <p>Contact</p>
+                    <div class="bullet">
+                        <span>2</span>
+                    </div>
+                    <div class="check fa fa-check"></div>
+                </div>
+
+                <div class="step">
+                    <p>Address</p>
+                    <div class="bullet">
+                        <span>3</span>
+                    </div>
+                    <div class="check fa fa-check"></div>
+                </div>
+
+                <div class="step">
+                    <p>Payment</p>
+                    <div class="bullet">
+                        <span>4</span>
+                    </div>
+                    <div class="check fa fa-check"></div>
+                </div>
+            </div>
+
+            <div class="form-outer">
+
+                <form id="form1" action="#">
+
+                    <div class="page slidepage">
+
+                        <div class="title">Upload Your File</div>
+
+                        <div class="field">
+                            <div class="label">UPLOAD</div>
+                            <input type="file" name="file" id="file">
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Select Type of Paper</div>
+                            <label for="selectedPaper1"></label><br>
+                            <select id="selectedPaper1" name="selectedPaper1">
+                                <option value="Null">------------------------------------</option>
+                                <option value="3">Normal Paper</option>
+                                <option value="5">Bond Paper</option>
+                                <option value="10">A3 Paper</option>
+                                <option value="20">Photo Paper</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Print From</div>
+                            <input type="number" name="printFrom" value="0" id="printFrom" onchange="printFromChange()">
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Print Upto</div>
+                            <input type="number" name="printUpto" value="0" id="printUpto" onchange="printFromChange()">
+                        </div>
+
+                        <div class="field">
+                            <div class="label">No of Cpoies</div>
+                            <input type="number" name="noOfCopies" value="0" id="noOfCopies"
+                                onchange="printFromChange()">
+                        </div>
+
+                        <div class="field">
+                            <label for="display1Value">First Amount </label><br>
+                            <input type="textbox" name="display1">
+                        </div>
+
+                        <div class="field nextBtn">
+                            <button>Next</button>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <div class="title">Your Details</div>
+
+                        <div class="field">
+                            <div class="label">First Name</div>
+                            <input type="text" name="firstName" id="firstName">
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Last Name</div>
+                            <input type="text" name="lastName" id="lastName">
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Mobile Number</div>
+                            <input type="tel" name="mobileNumber" id="mobileNumber">
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Email ID</div>
+                            <input type="email" name="emailID" id="emailID">
+                        </div>
+
+                        <div class="field btns">
+                            <button class="prev-1 prev">Previous</button>
+                            <button class="next-1 next">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <div class="title">Delivery Address</div>
+
+                        <div class="field">
+                            <div class="label">Select Your Pincode</div>
+                            <label for="pincode"></label><br>
+                            <select id="pincode" name="pincode">
+                                <option value="Null">------------------------------------</option>
+                                <option value="700135">700135</option>
+                                <option value="700156">700156</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Address</div>
+                            <label for=""></label>
+                            <input type="text" name="address1" id="address1"><br>
+                            <input type="text" name="address1" id="address1"><br>
+                            <input type="text" name="address1" id="address1"><br>
+                            <input type="text" name="address1" id="address1"><br>
+                            <input type="text" name="address1" id="address1">
+                        </div>
+
+                        <div class="field btns">
+                            <button class="prev-2 prev">Previous</button>
+                            <button class="next-2 next">Next</button>
+                        </div>
+
+                    </div>
+
+                    <div class="page">
+                        <div class="title">Payment</div>
+
+                        <div class="field">
+                            <div class="label">Select Your Pincode</div>
+                            <label for="pincode"></label><br>
+                            <select id="pincode" name="pincode">
+                                <option value="Null">------------------------------------</option>
+                                <option value="700135">700135</option>
+                                <option value="700156">700156</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Address</div>
+                            <input type="text" name="address1" id="address1"><br>
+                            <input type="text" name="address1" id="address1"><br>
+                            <input type="text" name="address1" id="address1"><br>
+                            <input type="text" name="address1" id="address1"><br>
+                            <input type="text" name="address1" id="address1">
+                        </div>
+
+                        <div class="field btns">
+                            <button class="prev-3 prev">Previous</button>
+                            <button class="submit">Submit</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function printFromChange() {
+
+                /* Total Amount Calculation of first upload */
+
+                var printFrom = document.getElementById("printFrom").value;
+                var printUpto = document.getElementById("printUpto").value;
+                var noOfCopies = document.getElementById("noOfCopies").value;
+                var selectedPaper1 = document.getElementById("selectedPaper1").value;
+
+
+                if (printFrom.length == 0) {
+                    document.getElementById("printFrom").value = "0";
+                }
+
+                if (printUpto.length == 0) {
+                    document.getElementById("printUpto").value = "0";
+                }
+
+                if (noOfCopies.length == 0) {
+                    document.getElementById("noOfCopies").value = "0";
+                }
+
+                /*var selectedPapers = document.getElementsByName('selectedPaper');
+                var selectedPaperValue;
+                for(var i = 0; i < selectedPapers.length; i++){
+                    if(selectedPapers[i].checked){
+                        selectedPaperValue = selectedPapers[i].value;
+                    }
+                }*/
+
+                var totalAmount1 = ((((printUpto - printFrom) + 1) * noOfCopies)) * selectedPaper1;
+
+                document.getElementsByName('display1')[0].value = totalAmount1;
+
+            }
+
+        </script>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

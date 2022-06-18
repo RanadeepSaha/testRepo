@@ -1,0 +1,177 @@
+                        <div class="hide" id="hide1" style="display:none">
+
+                            <div class="field">
+                                <div class="label">UPLOAD</div>
+                                <input type="file" name="file" id="file">
+                            </div>
+
+                            <div class="field">
+                                <div class="label">Select Type of Paper</div>
+                                <label for="selectedPaper2"></label><br>
+                                <select id="selectedPaper2" name="selectedPaper2">
+                                    <option value="Null">------------------------------------</option>
+                                    <option value="3">Normal Paper</option>
+                                    <option value="5">Bond Paper</option>
+                                    <option value="10">A3 Paper</option>
+                                    <option value="20">Photo Paper</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <div class="label">Print From</div>
+                                <input type="number" name="printFrom2" value="0" id="printFrom2"
+                                    onchange="printFromChange()">
+                            </div>
+
+                            <div class="field">
+                                <div class="label">Print Upto</div>
+                                <input type="number" name="printUpto2" value="0" id="printUpto2"
+                                    onchange="printFromChange()">
+                            </div>
+
+                            <div class="field">
+                                <div class="label">No of Cpoies</div>
+                                <input type="number" name="noOfCopies2" value="0" id="noOfCopies2"
+                                    onchange="printFromChange()">
+                            </div>
+
+                            <div class="field">
+                                <label for="display1Value">Second Amount </label><br>
+                                <input type="textbox" name="display1">
+                            </div>
+
+                            <div class="field hideBtn2">
+                                <button onclick="addUpload2()"> + </button>
+                            </div>
+
+                        </div>
+
+                        <div class="hide" id="hide2" style="display:none">
+                            <div class="field">
+                                <div class="label">UPLOAD</div>
+                                <input type="file" name="file" id="file">
+                            </div>
+
+                            <div class="field">
+                                <div class="label">Select Type of Paper</div>
+                                <label for="selectedPaper3"></label><br>
+                                <select id="selectedPaper3" name="selectedPaper3">
+                                    <option value="Null">------------------------------------</option>
+                                    <option value="3">Normal Paper</option>
+                                    <option value="5">Bond Paper</option>
+                                    <option value="10">A3 Paper</option>
+                                    <option value="20">Photo Paper</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <div class="label">Print From</div>
+                                <input type="number" name="printFrom3" value="0" id="printFrom3"
+                                    onchange="printFromChange()">
+                            </div>
+
+                            <div class="field">
+                                <div class="label">Print Upto</div>
+                                <input type="number" name="printUpto3" value="0" id="printUpto3"
+                                    onchange="printFromChange()">
+                            </div>
+
+                            <div class="field">
+                                <div class="label">No of Cpoies</div>
+                                <input type="number" name="noOfCopies3" value="0" id="noOfCopies3"
+                                    onchange="printFromChange()">
+                            </div>
+
+                            <div class="field">
+                                <label for="display3Value">Third Amount </label><br>
+                                <input type="textbox" name="display3">
+                            </div>
+                        </div>
+
+                        <div class="field hideBtn1">
+                            <button onclick="addUpload1()"> + </button>
+                        </div>
+
+                        <div class="field">
+                            <label for="display4Value">Grand Total </label><br>
+                            <input type="textbox" name="display4">
+                        </div>
+    <script>
+
+        function store()
+        {
+                        /* Total Amount Calculation of second upload */
+
+                        var printFrom2 = document.getElementById("printFrom2").value;
+                        var printUpto2 = document.getElementById("printUpto2").value;
+                        var noOfCopies2 = document.getElementById("noOfCopies2").value;
+                        var selectedPaper2 = document.getElementById("selectedPaper2").value;
+                        var totalAmount1 = 0;
+                        var totalAmount2 = 0;
+                        var totalAmount3 = 0;
+        
+        
+                        if (printFrom.length == 0) {
+                            document.getElementById("printFrom2").value = "0";
+                        }
+        
+                        if (printUpto.length == 0) {
+                            document.getElementById("printUpto2").value = "0";
+                        }
+        
+                        if (noOfCopies.length == 0) {
+                            document.getElementById("noOfCopies2").value = "0";
+                        }
+        
+        
+        
+                        var totalAmount2 = ((((printUpto2 - printFrom2) + 1) * noOfCopies2)) * selectedPaper2;
+        
+                        document.getElementsByName('display2')[0].value = totalAmount2;
+        
+                        /* Total Amount Calculation of third upload */
+        
+                        var printFrom3 = document.getElementById("printFrom3").value;
+                        var printUpto3 = document.getElementById("printUpto3").value;
+                        var noOfCopies3 = document.getElementById("noOfCopies3").value;
+                        var selectedPaper3 = document.getElementById("selectedPaper3").value;
+        
+        
+                        if (printFrom.length == 0) {
+                            document.getElementById("printFrom3").value = "0";
+                        }
+        
+                        if (printUpto.length == 0) {
+                            document.getElementById("printUpto3").value = "0";
+                        }
+        
+                        if (noOfCopies.length == 0) {
+                            document.getElementById("noOfCopies3").value = "0";
+                        }
+        
+                        var totalAmount3 = ((((printUpto3 - printFrom3) + 1) * noOfCopies3)) * selectedPaper3;
+        
+                        document.getElementsByName('display3')[0].value = totalAmount3;
+        
+                        var grandTotal = totalAmount1 + totalAmount2 + totalAmount3;
+        
+                        document.getElementsByName('display4')[0].value = grandTotal;
+        
+        
+                        /*alert('Total No of page ' + totalAmount);*/
+                    }
+        
+        
+                    function addUpload1() {
+                        var element1 = document.getElementById("hide1");
+                        element1.style.display = "block";
+                    }
+        
+                    
+        
+                    function addUpload2() {
+                        var element2 = document.getElementById("hide2");
+                        element2.style.display = "block";
+                    }
+
+                </script>                  
